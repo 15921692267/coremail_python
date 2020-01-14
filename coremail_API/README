@@ -1,0 +1,18 @@
+
+pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
+
+# 用户的相关操作
+run_user.py  # 用户的入口程序
+conf\user_operate_method.py  # 用户的入口程序会调用这个方法
+
+# 组织和域名的相关操作
+run_domain_org.py  # 组织的入口程序
+conf\org_Operate_Method.py  # 组织的入口程序会调用这个方法
+
+# 获取coremail的token和session id进行拼接
+conf\split_request_url.py  # operate_method.py 会调用这个文件获取到token+sid
+
+# coremail目录为测试小程序 和api无关
+DNS_resolve_def.py   # 检查dns解析
+sendmail.py  # 发送邮件测试,会显示详细的发信过程
+smtp_eml.py  # 发送邮件,不显示详细的发信过程
