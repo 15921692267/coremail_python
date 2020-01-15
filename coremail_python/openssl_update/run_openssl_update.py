@@ -5,6 +5,7 @@ import shutil
 
 coremail_home = "/home/coremail/"
 backup_coremail_dir = "backup_coremail_dir/"
+now = datetime.datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
 
 
 def compress_to_targz(tar_name, coremail_dir):
@@ -14,7 +15,7 @@ def compress_to_targz(tar_name, coremail_dir):
     :param coremail_dir: need compress coremail directory name
     :return:
     """
-    now = datetime.datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
+
     tar_file_name = backup_coremail_dir + "coremail_{tar_name}_{time}".format(tar_name=tar_name, time=now)
     shutil.make_archive(tar_file_name, "zip", coremail_dir)
     print tar_file_name + " backup finish"
