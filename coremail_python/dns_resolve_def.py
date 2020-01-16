@@ -1,5 +1,11 @@
 #!/usr/bin/python
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
+
+"""
+pip install dnspython
+yum -y install nmap
+"""
+
 import dns.resolver
 import sys
 import os
