@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
+python 2.*
 pip install dnspython
 yum -y install nmap
 """
