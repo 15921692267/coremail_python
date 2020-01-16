@@ -24,13 +24,18 @@ def dns_query(domain, type):
     return mx_record
 
 def nmap_ip_port(nmap_ip_list):
+    """
+    查询ip的端口号    
+    :param nmap_ip_list: A记录中查询的IP列表
+    :return:
+    """
     nmap_ip_list_unrepeat = []
     for ip_line in nmap_ip_list:
         if ip_line not in nmap_ip_list_unrepeat:
             nmap_ip_list_unrepeat.append(ip_line)
     for ip_line_2 in nmap_ip_list_unrepeat:
         print "-----------"
-        print ip_line_2
+        print "\033[32;1m%s\033[0m" % ip_line_2
         os.system("nmap -Pn %s" % ip_line_2)
 
 
@@ -51,7 +56,7 @@ def main():
             for ip_line in range(len(ip_List)):
                 nmap_ip_list.append(ip_List[ip_line])
         print "++++++++++++"
-        print "View nmap ip"
+        print "Info: view nmap ip"
         nmap_ip_port(nmap_ip_list)
     except Exception as e:
         print e
