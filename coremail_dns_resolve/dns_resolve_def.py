@@ -48,8 +48,9 @@ def nmap_ip_port(nmap_ip_list):
 
 def main():
     try:
-        print "eg: ./dns_resolve_def.py coremail.cn"
-        domain = sys.argv[1]
+        # print "eg: ./dns_resolve_def.py coremail.cn"
+        # domain = sys.argv[1]
+        domain = raw_input("\033[33;1mPlease domain name:\033[0m ")
         receive_mx = dns_query(domain, 'MX')
         dns_query(domain, 'TXT')
         print "+++++++++++"
