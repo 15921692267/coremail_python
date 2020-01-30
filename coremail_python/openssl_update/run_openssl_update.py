@@ -3,6 +3,11 @@ import os
 import datetime
 import shutil
 
+"""
+此程序只实现了备份bin libexec lib64三个目录的功能
+未完待续...
+"""
+
 coremail_home = "/home/coremail/"
 backup_coremail_dir = "backup_coremail_dir/"
 now = datetime.datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
